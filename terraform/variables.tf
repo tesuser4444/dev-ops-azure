@@ -1,39 +1,34 @@
-variable "subscription_id" {}
-variable "client_id" {}
-variable "client_secret" {}
-variable "tenant_id" {}
 
+variable "subscription_id" {
+  
+}
 variable "resource_group_name" {
- default = "mi-grupo-de-recursos"
+  default = "devopsa"
 }
 variable "location" {
- default = "East US"
+  default = "West US"
 }
 variable "acr_name" {
- default = "tuacrnombre"
+  default = "jorgetirado222"
 }
 variable "aks_cluster_name" {
- default = "tu-cluster-aks"
+  default = "messages"
 }
 variable "dns_prefix" {
- default = "tudnsprefix"
+  default = "kube"
 }
 variable "node_count" {
- default = 2
+  default = 1
 }
 variable "postgresql_server_name" {
- default = "tupostgresqlserver"
+  default = "dbserver102938"
 }
 variable "postgresql_admin_login" {
- default = "psqladmin"
+  default = "psqladmin"
 }
 variable "postgresql_admin_password" {
- default = "TuC0ntr@seña!"
+  default = "LtnPRBr0"
 }
 variable "postgresql_database_name" {
- default = "mensajes"
+  default = "mensajes"
 }
-variable "subscription_id" {}
-variable "client_id" {}
-variable "client_secret" {}
-variable "tenant_id" {}

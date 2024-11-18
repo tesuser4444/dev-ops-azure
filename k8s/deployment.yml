@@ -12,21 +12,21 @@ spec:
       labels:
         app: app-java-basico
     spec:
- containers:
-  - name: app-java-basico
-    image: tuacrnombre.azurecr.io/app-java-basico:latest
-    ports:
-    - containerPort: 9000
-    env:
-    - name: SPRING_DATASOURCE_URL
-      value: "jdbc:postgresql://tupostgresqlserver.postgres.database.azure.com:5432/mensajes?sslmode=require"
-    - name: SPRING_DATASOURCE_USERNAME
-      valueFrom:
-        secretKeyRef:
-          name: postgresql-secret
-          key: username
-    - name: SPRING_DATASOURCE_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: postgresql-secret
-          key: password
+      containers:
+      - name: app-java-basico
+        image: jorgetirado222.azurecr.io/app-java-basico:latest
+        ports:
+        - containerPort: 9000
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://dbserver102938.postgres.database.azure.com:5432/mensajes?sslmode=require"
+        - name: SPRING_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: postgresql-secret
+              key: username
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgresql-secret
+              key: password
